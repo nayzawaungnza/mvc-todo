@@ -3,22 +3,22 @@
     {
       "id": "2",
       "title": "My Second Todo",
-      "completed": false
+      "completed": true
     },
     {
       "id": "3",
       "title": "My Third Todo",
-      "completed": false
+      "completed": true
     },
     {
       "id": "bf2c",
       "title": "Go To Work and Back Home",
-      "completed": false
+      "completed": true
     },
     {
       "id": "23af",
       "title": "To Learn React Course",
-      "completed": false
+      "completed": true
     }
   ]
 }
