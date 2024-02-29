@@ -74,7 +74,7 @@ function App() {
     todos.forEach( t => {
       t.completed = true;
       updateTodo(t);
-  })
+    })
 
     //client side
     setTodos((prevState) => {
@@ -91,7 +91,7 @@ function App() {
       if(t.completed){
         deleteTodo(t.id);
       }
-  })
+    })
 
 
     //client side
@@ -102,6 +102,9 @@ function App() {
     })
 
   }
+
+ 
+  
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -109,7 +112,7 @@ function App() {
         <TodoForm addTodo={addTodo} />
         
 
-        <TodoList todos={todos} updateTodo={updateTodo} deleteTodo={deleteTodo} />
+        <TodoList todos={todos}  updateTodo={updateTodo} deleteTodo={deleteTodo} />
         
         <CheckAllAndRemaining checkAll={checkAll} remainingCount={remainingCount} />
         

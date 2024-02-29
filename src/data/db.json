@@ -9,6 +9,11 @@
       "id": "3",
       "title": "My Third Todo",
       "completed": true
+    },
+    {
+      "id": "21c3",
+      "title": "another check",
+      "completed": true
     }
   ]
 }
