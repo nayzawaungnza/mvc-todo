@@ -19,7 +19,7 @@ export default function TodoForm({addTodo}) {
   return (
     <>
     <form action="#" onSubmit={handleSubmit}>
-      {title}
+      
           <input
             type="text"
             className="todo-input"

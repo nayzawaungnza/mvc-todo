@@ -46,6 +46,27 @@ function App() {
     })
   }
 
+  let updateTodo = (todo) =>{ // todo is object , received
+    //update at server side
+    fetch(`http://localhost:3001/todos/${todo.id}`,{
+      method : "PATCH",
+      headers : {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo)
+    })
+    //update at client side
+    setTodos(prevState => {
+      return prevState.map(t => {
+        if(t.id == todo.id){
+          return todo
+        }
+        return t;
+      })
+      
+    })
+  }
+
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -53,7 +74,7 @@ function App() {
         <TodoForm addTodo={addTodo} />
         
 
-        <TodoList todos={todos} deleteTodo={deleteTodo} />
+        <TodoList todos={todos} updateTodo={updateTodo} deleteTodo={deleteTodo} />
         
         <CheckAllAndRemaining/>
         
