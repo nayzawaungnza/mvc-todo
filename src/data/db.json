@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": "1",
-      "title": "My First Todo",
-      "completed": true
-    },
-    {
       "id": "2",
       "title": "My Second Todo",
       "completed": false
@@ -18,6 +13,11 @@
     {
       "id": "bf2c",
       "title": "Go To Work",
+      "completed": false
+    },
+    {
+      "id": "23af",
+      "title": "To Learn React Course",
       "completed": false
     }
   ]

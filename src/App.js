@@ -33,6 +33,19 @@ function App() {
     setTodos(prevState => [...prevState,todo]) // ...prevState (array destructuring) //call previous state
   }
 
+  let deleteTodo = (todoId) =>{
+    //delete at server side
+    fetch(`http://localhost:3001/todos/${todoId}`,{
+      method : "DELETE"
+    })
+    //delete at client side
+    setTodos(prevState => {
+      return prevState.filter(todo => {
+        return todo.id != todoId
+      })
+    })
+  }
+
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -40,7 +53,7 @@ function App() {
         <TodoForm addTodo={addTodo} />
         
 
-        <TodoList todos={todos} />
+        <TodoList todos={todos} deleteTodo={deleteTodo} />
         
         <CheckAllAndRemaining/>
         
